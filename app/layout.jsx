@@ -1,11 +1,12 @@
-import "@styles/globals.css";
+'use client';
 
-import Nav from "@components/Nav";
-import Provider from "@components/Provider";
+import '@styles/globals.css';
+import Nav from '@components/Nav';
+import Provider from '@components/Provider';
 
 export const metadata = {
-  title: "promptopia",
-  description: "Discover & share AI prompts",
+  title: 'promptopia',
+  description: 'Discover & share AI prompts',
 };
 
 const RootLayout = ({ children }) => {
