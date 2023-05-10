@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 // import Image from 'next/image'; is used for image optimization for us.
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -89,14 +89,14 @@ const Nav = () => {
               <div className="dropdown">
                 <Link
                   href="/profile"
-                  classname="dropdown_link"
+                  className="dropdown_link"
                   onClick={() => settoggleDropdown(false)}
                 >
                   My profile
                 </Link>
                 <Link
                   href="/create-prompt"
-                  classname="dropdown_link"
+                  className="dropdown_link"
                   onClick={() => settoggleDropdown(false)}
                 >
                   Create Prompt

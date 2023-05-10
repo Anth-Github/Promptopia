@@ -1,7 +1,7 @@
-import NextAuth from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
-import { connectToDB } from '@utils/database';
-import User from '@models/user';
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
+import { connectToDB } from "@utils/database";
+import User from "@models/user";
 
 const handler = NextAuth({
   providers: [
@@ -33,14 +33,14 @@ const handler = NextAuth({
         if (!userExists) {
           await User.create({
             email: profile.email,
-            username: profile.name.replace(' ', '').toLowerCase(),
+            username: profile.name.replace(" ", "").toLowerCase(),
             image: profile.picture,
           });
         }
 
         return true;
       } catch (error) {
-        console.log(error);
+        console.log(`Database connection Error ->: ${error}`);
         return false;
       }
     },
